@@ -18,10 +18,10 @@ export class HeaderComponent implements OnInit {
 
   onQueryKeyup(queryString : string, enterClicked: boolean){
     if(enterClicked){
-      this.queryServer.processSearchRequest(queryString);
+      this.queryServer.termChanged.emit(queryString);
     }else{
       if(queryString.length % 4 == 0){
-        this.queryServer.processSearchRequest(queryString);
+        this.queryServer.termChanged.emit(queryString);
       }
     }
     
