@@ -1,0 +1,34 @@
+.header-logo{
+    position: absolute;
+    margin: 1rem;
+    top: 0%;
+    left: 0%;
+}
+
+.description{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__text{
+        flex: 1;
+        font-size: 3rem;
+    }
+
+    &__btn{
+        text-align: center;
+    }
+}
+
+.footer{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    display: block;
+    width: 100vw;
+    text-align: center;
+    font-size: 2.4rem;
+}

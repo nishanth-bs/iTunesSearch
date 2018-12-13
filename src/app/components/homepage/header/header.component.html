@@ -1,0 +1,23 @@
+<div class="header">
+  <div class="header__brand">
+    <div class="header__brand--icon">
+
+    </div>
+    <div class="header__brand--text">
+      Itunes Musicplayer
+    </div>
+  </div>
+  <div class="header__search">
+    <input type="text" 
+    #inputquery
+    (keyup) = "onQueryKeyup(inputquery.value,false)" 
+    (keyup.enter)="onQueryKeyup(inputquery.value,true)"
+    class="header__search-input">
+    <div class="header__button">
+
+    </div>
+  </div>
+  <div class="header__dummy">
+    
+  </div>
+</div>
