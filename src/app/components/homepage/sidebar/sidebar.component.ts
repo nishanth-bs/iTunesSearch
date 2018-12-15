@@ -11,6 +11,17 @@ export class SidebarComponent implements OnInit {
   private queryTerm : string;
   constructor(private queryServer: QueryServer) { }
   data :any;
+  sidebarTexts = [["iTunes music","icon-music"], 
+                  ["TV Shows","icon-television"], 
+                  ["Movies","icon-film"],
+                  ["Podcasts","icon-podcast"], 
+                  ["Music Videos","icon-soundcloud"],
+                  ["Books","icon-book"],
+                  ["Audiobooks","icon-file-audio-o"], 
+                  ["iOS Apps","icon-mobile"], 
+                  ["Mac Apps","icon-laptop"]]; 
+  sidebarImages = [];
+  sidebarColor = ["Orange","Red","Blue"];
   term: string;
   ngOnInit() {
     //this.queryTerm =
@@ -34,9 +45,4 @@ export class SidebarComponent implements OnInit {
       }
     );  
   }
-  show(){
-
-  }
-  
-
 }

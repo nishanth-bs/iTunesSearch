@@ -1,8 +1,27 @@
+@import '../../../styles/variables';
+.container{
+    background-image: linear-gradient(to right top, rgba($color-primary-1,.5),rgba($color-primary-6,0.5)),url('../../../assets/homepage.jpg');
+    background-position: bottom;
+    background-size: cover;
+    color: $color-light-2;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+    font-weight: 300;
+    height: 100vh;
+    width: 100vw;
+}
+
 .header-logo{
     position: absolute;
     margin: 1rem;
     top: 0%;
     left: 0%;
+
+    &__icon{
+        
+        fill: $color-light-3;
+    }
+    
 }
 
 .description{
@@ -16,13 +35,25 @@
     &__text{
         flex: 1;
         font-size: 3rem;
+        line-height: 4rem;
     }
-
     &__btn{
         text-align: center;
+
     }
 }
+.btn{
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2.4rem;
+    background-color: $color-light-2;
+    color:$color-primary-1;
+    font-weight: 400;
+    margin: .5rem;
+    padding: 1.5rem;
+    border-radius: 5px;
 
+}
 .footer{
     position: absolute;
     bottom: 0%;

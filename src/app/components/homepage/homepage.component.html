@@ -1,2 +1,8 @@
-<app-header></app-header>
-<app-sidebar></app-sidebar>
+<app-header class="app-header"></app-header>
+<div class="content">
+    <div class="content__collapsible">
+        <app-sidebar></app-sidebar>
+    </div>
+    <app-centercontent class="content__main"></app-centercontent>    
+</div>
+<router-outlet></router-outlet>

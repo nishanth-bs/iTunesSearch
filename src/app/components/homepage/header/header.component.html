@@ -1,10 +1,12 @@
-<div class="header">
-  <div class="header__brand">
-    <div class="header__brand--icon">
 
-    </div>
+<div class="header" #header (scroll)="scrollDown()" 
+      [scrollTop] = "scrollTop">
+  <div class="header__brand">
+    <svg class="header__brand--icon">
+      <use xlink:href="../../../../assets/svg/symbol-defs.svg#icon-apple"></use>
+    </svg>
     <div class="header__brand--text">
-      Itunes Musicplayer
+      iTunesSearch
     </div>
   </div>
   <div class="header__search">
@@ -13,10 +15,12 @@
     (keyup) = "onQueryKeyup(inputquery.value,false)" 
     (keyup.enter)="onQueryKeyup(inputquery.value,true)"
     class="header__search-input">
-    <div class="header__button">
-
-    </div>
+    
+      <svg class="header__icon">
+        <use xlink:href="../../../../assets/svg/symbol-defs.svg#icon-magnifying-glass"></use>
+      </svg>
   </div>
+  <app-inputsuggestions></app-inputsuggestions>
   <div class="header__dummy">
     
   </div>

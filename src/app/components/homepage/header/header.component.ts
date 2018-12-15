@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 import { QueryServer } from 'src/app/services/queryServer.service';
 
@@ -9,11 +9,12 @@ import { QueryServer } from 'src/app/services/queryServer.service';
 })
 export class HeaderComponent implements OnInit {
   
-  private 
+  @ViewChild('header') private headerEle;
 
-  constructor(private queryServer : QueryServer) { }
+  constructor(private queryServer : QueryServer) {   }
 
   ngOnInit() {
+    
   }
 
   onQueryKeyup(queryString : string, enterClicked: boolean){
@@ -26,4 +27,5 @@ export class HeaderComponent implements OnInit {
     }
     
   }
+  
 }

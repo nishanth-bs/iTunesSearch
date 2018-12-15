@@ -1,8 +1,8 @@
 @import "../../../../styles/variables";
 .header {
     font-size: 2rem;
-    height: 3rem;
-    background-color: $color-primary-1;
+    height: 100%;
+    background-color: rgba($color-primary-1,.9);
     border-bottom: $line;
 
     display: flex;
@@ -10,25 +10,42 @@
     align-items: center;
 
     &__brand{
+        align-self: center;
         flex: 0 0 20%;
+        display: flex;
+        align-items: center;
+        &--icon{
+            fill: $color-light-3;
+            height: 3.5rem;
+            width: 3.5rem;
+            margin: 0 1rem;
+
+            align-self: center;
+        }
+        &--text{
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 300;
+            color : $color-light-3;
+        }
     }
     &__search{
-        
         justify-self: center;
+        flex: 0 0 50%;
         display: flex;
         justify-content: center;
     }
 
-    @media only screen and (max-width: 200rem) {
+    @media only screen and (max-width: 200rem){
         flex-wrap: wrap;
         align-content: space-around;
-        height: 11rem;
+        //height: 8rem;
     }
     &__search-input {
-        font-family: inherit;
+        font-family: sans-serif;
         font-size: inherit;
-        color: inherit;
-        background-color: #fff;
+        color: $color-primary-1;
+        background-color: $color-light-2;
         border: none;
         padding: .7rem 2rem;
         border-radius: 100px;
@@ -38,12 +55,13 @@
 
         &:focus {
             outline: none;
-            background-color:#eee;
+            background-color:$color-light-3;
         }
 
         &::-webkit-input-placeholder {
+            font-family: inherit;
             font-weight: 100;
-            color: var(--color-grey-light-4);
+            color: $color-primary-3;
         }
     }
 
@@ -67,7 +85,8 @@
     &__icon {
         height: 2rem;
         width: 2rem;
-        fill: var(--color-grey-dark-3);
+        fill: $color-primary-2;
+        transform: translateY(.5rem);
     }
 
 }

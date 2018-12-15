@@ -1,0 +1,18 @@
+.app-header{
+    height: 8rem;
+    position: fixed;
+    top: 0;
+    display: block;
+    width: 100vw;
+}
+.content{
+    margin-top: 8rem;
+    display: flex;
+    
+    &__collapsible{
+        width: 22rem;
+    }
+    &__main{
+        flex: 1;
+    }
+}

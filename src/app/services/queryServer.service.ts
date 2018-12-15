@@ -14,11 +14,20 @@ export class QueryServer{
         //console.log(this.termString);
         let url: string = "https://itunes.apple.com/search?term=modi";
         if(term !== ''){
-            url  = 'https://itunes.apple.com/search?term='+term;    
+            url  = 'https://itunes.apple.com/search?country=in&entity=musicTrack&attribute=songTerm&limit=10&term='+term;    
         }else{
             term = "rahul";
         }
         //let url : string = 'https://itunes.apple.com/search?term='+term;
         return this.http.get(url);//api/search?term='+this.termString);
+    }
+
+    getArtistResults(term:string){
+        let url :  string = "https://itunes.apple.com/search?country=in&entity=musicTrack&attribute=artistTerm&limit=10&term="+term;
+        return this.http.get(url);
+    }
+    getSongResults(term:string){
+        let url :  string = "https://itunes.apple.com/search?country=in&entity=musicTrack&attribute=songTerm&limit=10&term="+term;
+        return this.http.get(url);
     }
 }
