@@ -13,10 +13,11 @@ export class CentreRowComponent implements OnInit {
   recentReleasesResponse: HomepageCardDetail[] = [];
   newMusicResponse: HomepageCardDetail[] = [];
   topAlbumsResponse: HomepageCardDetail[] =[];
+  wordLimit = 30;
   constructor(private top10 : Top10Genre) { }
   
   ngOnInit() {
-    this.top10.getTopiTunes().subscribe(response => {
+    /*this.top10.getTopiTunes().subscribe(response => {
       console.log(response);
       response['feed']['results'].forEach(element => {
         let b= {
@@ -32,8 +33,9 @@ export class CentreRowComponent implements OnInit {
         this.topSongsResponse = this.topSongsResponse.concat(b);
         console.log(this.topSongsResponse);
       });
-    });/*
+    });*/
     this.top10.getHotTracks().subscribe(response => {
+      console.log(response);
       response['feed']['results'].forEach(element => {
         let b= {
           thumbnail: element['artworkUrl100'],
@@ -46,6 +48,7 @@ export class CentreRowComponent implements OnInit {
         console.log(this.hotTracksResponse);
       });
     });
+    
     this.top10.getRecentReleases().subscribe(response => {
       response['feed']['results'].forEach(element => {
         let b= {
@@ -84,7 +87,7 @@ export class CentreRowComponent implements OnInit {
         this.topAlbumsResponse = this.topAlbumsResponse.concat(b);
         console.log(this.topAlbumsResponse);
       });
-    });*/
+    });
   }
 
 }

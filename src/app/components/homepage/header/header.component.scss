@@ -34,6 +34,7 @@
         flex: 0 0 50%;
         display: flex;
         justify-content: center;
+        position: relative;
     }
 
     @media only screen and (max-width: 200rem){
@@ -49,7 +50,7 @@
         border: none;
         padding: .7rem 2rem;
         border-radius: 100px;
-        width: 90%;
+        width: 100%;
         transition: all .2s;
         margin-right: -3.25rem;
 
@@ -89,5 +90,14 @@
         transform: translateY(.5rem);
     }
 
+    &__inputSuggestions{
+        position: absolute;
+        top: 100%;
+        left: 2%;
+        width: 98%;
+        background-color: $color-light-3;
+        color: $color-primary-1;
+
+    }
 }
 

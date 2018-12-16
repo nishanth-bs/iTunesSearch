@@ -12,33 +12,25 @@ import { HomepageComponent } from './homepage.component';
 import { InputsuggestionsComponent } from './header/inputsuggestions/inputsuggestions.component';
 import { CardComponent } from './card/card.component';
 import { SearchitemcardComponent } from './searchitemcard/searchitemcard.component';
+import { ResultpageComponent } from './resultpage/resultpage.component';
+import { ProcessString } from 'src/app/shared/processString';
+import { MainContentModule } from './main-content/main-content.module';
+import { InputSuggestionsItemComponent } from './header/inputsuggestions/input-suggestions-item/input-suggestions-item.component';
+import { ResultpagerowComponent } from './resultpage/resultpagerow/resultpagerow.component';
 
 @NgModule({
   declarations: [
-      CentercontentComponent,
-      HeaderComponent,
-      HomepageComponent,
-      SidebarItemComponent,
-      CentreRowComponent,
-      CardComponent,
+       HomepageComponent,
+       HeaderComponent,
       InputsuggestionsComponent,
-      SearchitemcardComponent,
-      SidebarComponent],
+    InputSuggestionsItemComponent,
+    ResultpagerowComponent],
   imports: [
     CommonModule,
-    HomepageRoutingModule
+    HomepageRoutingModule,
+    MainContentModule
   ],
-  exports:[
-    CentercontentComponent,
-      HeaderComponent,
-      HomepageComponent,
-      SidebarItemComponent,
-      CentreRowComponent,
-      CardComponent,
-      InputsuggestionsComponent,
-      SearchitemcardComponent,
-      SidebarComponent
-  ],
+  exports:[  ],
   providers:[QueryServer,
     Top10Genre]
 })

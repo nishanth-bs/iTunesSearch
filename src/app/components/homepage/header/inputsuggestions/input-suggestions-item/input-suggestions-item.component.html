@@ -1,0 +1,22 @@
+<ul class="list" *ngFor="let item of data">
+
+    <li class="list__item">
+      <a [routerLink]="['/home','search','songName',item.trackCensoredName]" routerLinkActive="router-link-active" >
+      <img src="{{item.artistName}}" class="list__item--image" alt="">
+      <div class="primarySearchOp" *ngIf="item.trackCensoredName.length && item.trackCensoredName.length <= 30">
+        {{item.trackCensoredName}}
+      </div>
+      <div class="list__item--name" *ngIf="item.trackCensoredName.length && item.trackCensoredName.length > 30">
+        {{item.trackCensoredName.substring(0,27)}}...
+      </div>
+      <!--
+      <div class="list__item--name" *ngIf="item.trackCensoredName.length && item.artistName.length <= 30">
+        {{item.artistName}}
+      </div><!--
+      <div class="secondarySearchOp" *ngIf="item.trackCensoredName.length && item.artistName.length > 30">
+        {{item.artistName.substring(0,27)}}...
+      </div>
+      -->
+    </a>
+    </li>
+  </ul>

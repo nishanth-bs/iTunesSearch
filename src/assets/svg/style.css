@@ -1,0 +1,44 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-music {
+  width: 0.8571428571428571em;
+}
+
+.icon-film {
+  width: 1.0714285714285714em;
+}
+
+.icon-laptop {
+  width: 1.0714285714285714em;
+}
+
+.icon-soundcloud {
+  width: 1.2857142857142856em;
+}
+
+.icon-file-audio-o {
+  width: 0.8571428571428571em;
+}
+
+.icon-television {
+  width: 1.0714285714285714em;
+}
+
+.icon-podcast {
+  width: 0.8482142857142857em;
+}

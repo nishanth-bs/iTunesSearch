@@ -1,18 +1,56 @@
 <div class="card">
-  <div class="card__genre">
-    {{primaryGenreName}}
+  <div class="card__image">
+    <img class="card__thumbnail" src="{{thumbnail}}" alt="{{name}}">
   </div>
-  <img class="card__thumbnail" src="{{artworkUrl60}}" alt="{{trackCensoredName}}">
+  <div class="card__text">
+    <a [routerLink]="['search','songName',name.split(' ').join('')]"
+        class="card__text--name" 
+        *ngIf="name.length > 30">
+      {{name.substring(0,wordLimit-3)}}...
+    </a>
+    <a [routerLink]="['search','songName',name]"
+      class="card__text--name" 
+      *ngIf="name.length <= 30">
+      {{name}}
+    </a>
+    <a [routerLink]="['search','artistName',artistName]" 
+      routerLinkActive="router-link-active"  
+      class="card__text--artistName" 
+      *ngIf="artistName.length >wordLimit">
+      {{artistName.substring(0,wordLimit-3)}}...
+    </a>
+    <a [routerLink]="['search','artistName',artistName]" 
+      routerLinkActive="router-link-active"  
+      class="card__text--artistName" 
+      *ngIf="artistName.length <=wordLimit">
+      {{artistName}}
+    </a>
+    <!--
+    <p class="card__text--releaseDate">
+      {{releaseDate}}
+    </p>
+    <p class="card__text--genre">
+      {{genre}}
+    </p>
+    -->
+  </div>
+</div>
+<!--
+<div class="card">
+  <div class="card__genre">
+    {{genre}}
+  </div>
+  <img class="card__thumbnail" src="{{thumbnail}}" alt="{{name}}">
   <div class="card__play">
     <!--
     <svg class="card__extra--icon">
         <use xlink:href="../../../assets/svg/symbol-defs.svg#icon-play-circle"></use>
     </svg>
-    -->
+    
   </div>
   <div class="card__text">
     <div class="card__title">
-      {{trackCensoredName}}
+      {{name}}
     </div>
     <div class="card__description">
       <div class="card__description--artist-name">
@@ -25,15 +63,16 @@
   </div>
   <div class="card__extra">
     <div class="card__extra--price">
-    {{collectionPrice}}
+    
     </div>
-    <a href="{{collectionViewUrl}}" class="card__extra--link">
+    <a class="card__extra--link">
       <!--
       <svg class="card__extra--icon">
           <use xlink:href="../../../assets/svg/symbol-defs.svg#icon-external-link"></use>
       </svg>
-      -->
+      
       iTunes
     </a>
   </div>
 </div>
+-->

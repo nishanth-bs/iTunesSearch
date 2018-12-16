@@ -1,0 +1,110 @@
+<div class="row" *ngIf="songData.length > 0">
+    <div class="row__top">
+      <div class="row__top--header">
+        Songs
+      </div>
+      <a routerLinkActive="router-link-active"  class="row__top--button">
+        View more
+      </a>
+    </div>
+    <div class="row__center">
+    <app-searchitemcard class="row__item" *ngFor="let item of songData" 
+        [artworkUrl60] ="item.artworkUrl60"
+        [previewUrl] = "item.previewUrl"
+        [trackCensoredName]= "item.trackCensoredName"
+        [artistName]="item.artistName"
+        [releaseDate]="item.releaseDate"
+        [primaryGenreName]="item.primaryGenreName"
+        [collectionPrice]="item.collectionPrice"
+        [collectionViewUrl]="item.collectionViewUrl"
+      ></app-searchitemcard>
+      
+    </div>
+   <!-- <app-searchitemcard class="row__item"
+        [data]="songData"></app-searchitemcard>-->
+    
+  </div>
+  
+
+<div class="row" *ngIf="artistData.length > 0">
+    <div class="row__top">
+      <div class="row__top--header">
+        Songs
+      </div>
+      <a class="row__top--button">
+        View more
+      </a>
+    </div>
+    <div class="row__center">
+    <app-searchitemcard class="row__item" *ngFor="let item of artistData" 
+        [artworkUrl60] ="item.artworkUrl60"
+        [previewUrl] = "item.previewUrl"
+        [trackCensoredName]= "item.trackCensoredName"
+        [artistName]="item.artistName"
+        [releaseDate]="item.releaseDate"
+        [primaryGenreName]="item.primaryGenreName"
+        [collectionPrice]="item.collectionPrice"
+        [collectionViewUrl]="item.collectionViewUrl"
+      ></app-searchitemcard>
+      
+    </div>
+    <!-- <app-searchitemcard class="row__item"
+        [data]="songData"></app-searchitemcard>-->
+    
+  </div>
+  
+  
+<div class="row" *ngIf="albumData.length > 0">
+    <div class="row__top">
+      <div class="row__top--header">
+        Songs
+      </div>
+      <a class="row__top--button">
+        View more
+      </a>
+    </div>
+    <div class="row__center">
+    <app-searchitemcard class="row__item" *ngFor="let item of albumData" 
+        [artworkUrl60] ="item.artworkUrl60"
+        [previewUrl] = "item.previewUrl"
+        [trackCensoredName]= "item.trackCensoredName"
+        [artistName]="item.artistName"
+        [releaseDate]="item.releaseDate"
+        [primaryGenreName]="item.primaryGenreName"
+        [collectionPrice]="item.collectionPrice"
+        [collectionViewUrl]="item.collectionViewUrl"
+      ></app-searchitemcard>
+      
+    </div>
+    <!-- <app-searchitemcard class="row__item"
+        [data]="songData"></app-searchitemcard>-->
+    
+  </div>
+  
+
+<div class="row" *ngIf="composerData.length > 0">
+  <div class="row__top">
+    <div class="row__top--header">
+      Composer
+    </div>
+    <a class="row__top--button">
+      View more
+    </a>
+  </div>
+  <div class="row__center">
+  <app-searchitemcard class="row__item" *ngFor="let item of composerData" 
+      [artworkUrl60] ="item.artworkUrl60"
+      [previewUrl] = "item.previewUrl"
+      [trackCensoredName]= "item.trackCensoredName"
+      [artistName]="item.artistName"
+      [releaseDate]="item.releaseDate"
+      [primaryGenreName]="item.primaryGenreName"
+      [collectionPrice]="item.collectionPrice"
+      [collectionViewUrl]="item.collectionViewUrl"
+    ></app-searchitemcard>
+    
+  </div>
+  <!-- <app-searchitemcard class="row__item"
+      [data]="songData"></app-searchitemcard>-->
+  
+</div>

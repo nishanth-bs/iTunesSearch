@@ -1,5 +1,20 @@
-<ul class="list" *ngFor="let item of data">
-  <li class="list__item">
-    <a>{{item}}</a> 
-  </li>
-</ul>
+
+<div class="suggestions-box" >
+    <div class="suggestions-box__title" *ngIf="songData.length >0">
+        Songs
+    </div>
+    <app-input-suggestions-item [data]="songData"></app-input-suggestions-item>
+    <div class="suggestions-box__title" *ngIf="artistData.length >0">
+        Artists
+    </div>
+    <app-input-suggestions-item [data]="artistData"></app-input-suggestions-item>
+    <div class="suggestions-box__title" *ngIf="composerData.length >0">
+        Composers
+    </div>
+    <app-input-suggestions-item [data]="composerData"></app-input-suggestions-item>
+    <div class="suggestions-box__title" *ngIf="albumData.length >0">
+        Albums
+    </div>
+    <app-input-suggestions-item [data]="albumData"></app-input-suggestions-item>
+    
+</div>

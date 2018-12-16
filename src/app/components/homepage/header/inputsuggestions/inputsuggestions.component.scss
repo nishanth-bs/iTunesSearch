@@ -1,0 +1,6 @@
+@import "../../../../../styles/variables";
+.suggestions-box{
+    overflow-y: scroll;
+    max-height: 75vh;
+    min-height: auto;
+}

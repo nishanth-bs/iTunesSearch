@@ -1,0 +1,26 @@
+@import "../../../../../../styles/variables";
+.list{
+    list-style: none;
+    &__item{
+        margin-left: 2%;
+        width: 98%;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-content: center;
+        &--image{
+            align-self: center;
+            height: 7rem;
+            width: 7rem;
+            border-radius: 6px;
+        }
+        &--text{
+            display: inline;
+            align-self: center;
+            font-size: 1.5rem;
+            color: $color-primary-1;
+        }
+    }
+    
+}

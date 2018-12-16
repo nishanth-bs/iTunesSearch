@@ -14,14 +14,21 @@
     #inputquery
     (keyup) = "onQueryKeyup(inputquery.value,false)" 
     (keyup.enter)="onQueryKeyup(inputquery.value,true)"
+    (focus)="hideSuggestion()"
+    (focusout)="showSuggestion()"
     class="header__search-input">
     
       <svg class="header__icon">
         <use xlink:href="../../../../assets/svg/symbol-defs.svg#icon-magnifying-glass"></use>
       </svg>
+      <div *ngIf="!inputFocus">
+          <app-inputsuggestions (click)="hideSuggestion()" class="header__inputSuggestions">
+          </app-inputsuggestions>
+
+      </div>
   </div>
-  <app-inputsuggestions></app-inputsuggestions>
   <div class="header__dummy">
     
   </div>
+  
 </div>
