@@ -10,6 +10,7 @@ import { ResultpageCardDetail } from 'src/app/shared/resultpage-card-detail';
   styleUrls: ['./resultpage.component.scss']
 })
 export class ResultpageComponent implements OnInit {
+  overallData: ResultpageCardDetail[];
 
   constructor(private activatedRoute: ActivatedRoute, private queryServer: QueryServer) { }
   inputArg :string;
@@ -20,21 +21,23 @@ export class ResultpageComponent implements OnInit {
   artistData:ResultpageCardDetail[] = [];
   term: string = this.inputArg;
   pic:string;
-
+  
   ngOnInit() {
     this.activatedRoute.params.subscribe((params: Params)=>{
       this.inputArg = params['name'];
       this.inputArgType = params['category'];
+      console.log(params);
+      
       this.term = this.inputArg;
       //console.log(this.inputArg, this.inputArgType);
       this.queryServer.getSearchResults(this.term,10).subscribe(
         (response: Response)=>{
           this.songData = [];
           let b:ResultpageCardDetail;
-          console.log("RESEEEEEEE"+response['results']);
+          //console.log("RESEEEEEEE"+response['results']);
           response['results'].forEach(element => {
             
-            console.log(element);
+            //console.log(element);
             this.pic = element['artworkUrl60'];
             this.pic = [this.pic.slice(0,this.pic.indexOf('60x60bb.jpg')),'600x600bb.jpg'].join('');
             b = {
@@ -48,9 +51,10 @@ export class ResultpageComponent implements OnInit {
               collectionViewUrl : element['collectionViewUrl']
           }
           this.songData = this.songData.concat(b);
-          });
+          },
+          (error) =>{console.log("AA")});
           
-          console.log(this.songData);
+          //console.log(this.songData);
         }
       );
         
@@ -129,6 +133,9 @@ export class ResultpageComponent implements OnInit {
           console.log(this.albumData);
         }
       );
+    
+      
+    
     });
 
     

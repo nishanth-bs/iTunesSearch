@@ -1,14 +1,14 @@
 
 <div class="header" #header (scroll)="scrollDown()" 
       [scrollTop] = "scrollTop">
-  <div class="header__brand">
+  <a [routerLink]="['/home']" class="header__brand">
     <svg class="header__brand--icon">
       <use xlink:href="../../../../assets/svg/symbol-defs.svg#icon-apple"></use>
     </svg>
     <div class="header__brand--text">
       iTunesSearch
     </div>
-  </div>
+  </a>
   <div class="header__search">
     <input type="text" 
     #inputquery
@@ -16,6 +16,7 @@
     (keyup.enter)="onQueryKeyup(inputquery.value,true)"
     (focus)="hideSuggestion()"
     (focusout)="showSuggestion()"
+    placeholder="Search songs, artists, albums..."
     class="header__search-input">
     
       <svg class="header__icon">

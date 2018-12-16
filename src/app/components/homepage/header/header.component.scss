@@ -8,12 +8,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 
     &__brand{
-        align-self: center;
-        flex: 0 0 20%;
-        display: flex;
-        align-items: center;
+        &:link,&:active,&:hover,&:visited{
+            align-self: center;
+            flex: 0 0 20%;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
         &--icon{
             fill: $color-light-3;
             height: 3.5rem;
@@ -60,9 +64,9 @@
         }
 
         &::-webkit-input-placeholder {
-            font-family: inherit;
+            font-family: 'Signika', sans-serif;
             font-weight: 100;
-            color: $color-primary-3;
+            color: $color-light-1;
         }
     }
 
@@ -97,6 +101,9 @@
         width: 98%;
         background-color: $color-light-3;
         color: $color-primary-1;
+        @media only screen and (max-width:400px) {
+            width: 100vw;
+        }
 
     }
 }

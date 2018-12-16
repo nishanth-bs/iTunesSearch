@@ -1,25 +1,26 @@
 <div class="card">
-  <div class="card__image">
+  <a [routerLink]="['search','songName',name.split(' ').join('')]"
+     class="card__image">
     <img class="card__thumbnail" src="{{thumbnail}}" alt="{{name}}">
-  </div>
+  </a>
   <div class="card__text">
     <a [routerLink]="['search','songName',name.split(' ').join('')]"
         class="card__text--name" 
         *ngIf="name.length > 30">
       {{name.substring(0,wordLimit-3)}}...
-    </a>
-    <a [routerLink]="['search','songName',name]"
+    </a> 
+    <a [routerLink]="['search','songName',name.split(' ').join('')]"
       class="card__text--name" 
       *ngIf="name.length <= 30">
-      {{name}}
+      {{name}} 
     </a>
-    <a [routerLink]="['search','artistName',artistName]" 
+    <a [routerLink]="['search','artistName',artistName.split(' ').join('')]" 
       routerLinkActive="router-link-active"  
       class="card__text--artistName" 
       *ngIf="artistName.length >wordLimit">
       {{artistName.substring(0,wordLimit-3)}}...
     </a>
-    <a [routerLink]="['search','artistName',artistName]" 
+    <a [routerLink]="['search','artistName',artistName.split(' ').join('')]" 
       routerLinkActive="router-link-active"  
       class="card__text--artistName" 
       *ngIf="artistName.length <=wordLimit">

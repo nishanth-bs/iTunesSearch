@@ -10,7 +10,7 @@
             font-weight: 200;
             font-size: 3.5rem;
         }
-
+ 
         &--button{
             margin-right: 1rem;
             font-family: 'Josefin Sans', sans-serif;
@@ -23,7 +23,7 @@
     }
 
     &__center{
-        display: grid;
+        display: grid; 
         
         grid-template-columns: repeat(auto-fit,minmax(23rem,1fr));
         grid-template-rows: repeat(1, minmax(23rem, 1fr));

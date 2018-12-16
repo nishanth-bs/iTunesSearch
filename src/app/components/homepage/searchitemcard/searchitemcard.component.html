@@ -2,16 +2,16 @@
   <div class="card__genre">
     {{primaryGenreName}}
   </div>
-  <img class="card__thumbnail" src="{{artworkUrl60}}" alt="{{trackCensoredName}}">
-  <div class="card__play">
-      <!--
-      <svg class="card__extra--icon">
+  
+  <a (click)="playThis(previewUrl)"   class="card__play">
+      <img class="card__thumbnail" src="{{artworkUrl60}}" alt="{{trackCensoredName}}">
+      <svg class="card__play--icon">
           <use xlink:href="../../../assets/svg/symbol-defs.svg#icon-play-circle"></use>
       </svg>
-      -->
-  </div>
+      
+    </a> 
   <div class="card__text">
-    <a [routerLink]="['/home','search','songName',trackCensoredName.split(' ').join('')]"
+    <a [routerLink]="['/home','search','song',trackCensoredName.split(' ').join('')]"
       class="card__text--name" 
       *ngIf="trackCensoredName.length > 30">
       {{trackCensoredName.substring(0,wordLimit-3)}}...
@@ -34,23 +34,24 @@
           {{artistName}}
         </a>
     
-      <div class="card__description">
-        
-        <div class="card__description--release-date">
-          {{releaseDate}}
-        </div>
-      </div>
+      <!--
+        <div class="card__description">
+          <div class="card__description--release-date">
+            {{releaseDate}}
+          </div>
+        </div>    
+      -->
     </div>
     <div class="card__extra">
       <div class="card__extra--price">
       {{collectionPrice}}
       </div>
       <a href="{{collectionViewUrl}}" class="card__extra--link">
-        <!--
+        
         <svg class="card__extra--icon">
             <use xlink:href="../../../assets/svg/symbol-defs.svg#icon-external-link"></use>
         </svg>
-        -->
+        
         iTunes
       </a>
     </div>

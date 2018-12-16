@@ -17,6 +17,8 @@ import { ProcessString } from 'src/app/shared/processString';
 import { MainContentModule } from './main-content/main-content.module';
 import { InputSuggestionsItemComponent } from './header/inputsuggestions/input-suggestions-item/input-suggestions-item.component';
 import { ResultpagerowComponent } from './resultpage/resultpagerow/resultpagerow.component';
+import { PlayMusicComponent } from './play-music/play-music.component';
+import { playAudio } from 'src/app/services/playAudio';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { ResultpagerowComponent } from './resultpage/resultpagerow/resultpagerow
   ],
   exports:[  ],
   providers:[QueryServer,
-    Top10Genre]
+    Top10Genre,
+  ]
 })
 export class HomepageModule { }

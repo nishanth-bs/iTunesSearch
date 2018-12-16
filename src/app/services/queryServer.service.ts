@@ -53,4 +53,15 @@ export class QueryServer{
         }
         return this.http.get(url);
     }
+
+    getoverallResults(term:string,limit:number,type:string){
+        let url :  string;
+        if(term !== ''){
+            url  = "https://itunes.apple.com/search?country=in&entity=musicTrack&attribute="+type+"Term&limit="+limit+"&term="+term;
+             //"https://itunes.apple.com/search?country=in&entity=musicTrack&attribute=albumTerm&limit="+limit+"&term="+term;
+        }else{
+            url  = 'https://itunes.apple.com/search?country=in&entity=musicTrack&attribute='+type+'Term&limit='+limit+'&term=zzqwpoawzyiwa';
+        }
+        return this.http.get(url);
+    }
 }

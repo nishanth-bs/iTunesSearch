@@ -16,10 +16,17 @@
     margin: 1rem;
     top: 0%;
     left: 0%;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+    color : $color-light-3;
 
     &__icon{
-        
         fill: $color-light-3;
+        height: 4rem;
+        width: 4rem;
+        margin: 0 .5rem;
+
     }
     
 }
@@ -28,6 +35,9 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    @media screen and (max-width:400px){
+        width: 75%;
+    }
     transform: translate(-50%,-50%);
     display: flex;
     flex-direction: column;
@@ -36,6 +46,15 @@
         flex: 1;
         font-size: 3rem;
         line-height: 4rem;
+        @media screen and (max-width: 600px){
+            font-size: 2.5rem;
+            line-height: 3.5rem;
+        }
+        @media screen and (max-width: 500px){
+            font-size: 2rem;
+            line-height: 3rem;
+        }
+        
     }
     &__btn{
         text-align: center;

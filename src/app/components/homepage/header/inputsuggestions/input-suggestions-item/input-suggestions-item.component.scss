@@ -1,14 +1,24 @@
 @import "../../../../../../styles/variables";
 .list{
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     &__item{
-        margin-left: 2%;
-        width: 98%;
-
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: start;
-        align-content: center;
+        flex: 0 0 70%;
+        margin: .4rem 0;
+        &--link{
+            width: 100%;
+            display: flex;
+            justify-content: start;
+            align-content: center;
+            &:link,&:visited,&:active,&:hover{
+                font-family: 'Signika', sans-serif;
+                color: $color-primary-1;
+                text-decoration: none;
+            }
+            
+        }
         &--image{
             align-self: center;
             height: 7rem;
@@ -16,10 +26,12 @@
             border-radius: 6px;
         }
         &--text{
-            display: inline;
+            flex: 1;
             align-self: center;
             font-size: 1.5rem;
             color: $color-primary-1;
+            
+
         }
     }
     

@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 
 import { QueryServer } from 'src/app/services/queryServer.service';
 import { Subject } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +15,7 @@ export class HeaderComponent implements OnInit {
   
   @ViewChild('header') private headerEle;
 
-  constructor(private queryServer : QueryServer) {   }
+  constructor(private queryServer : QueryServer, private router: Router) {   }
 
   ngOnInit() {
     //this.inputFocus.next(false);
@@ -22,9 +23,10 @@ export class HeaderComponent implements OnInit {
 
   onQueryKeyup(queryString : string, enterClicked: boolean){
     if(enterClicked){
-      this.queryServer.termChanged.emit(queryString);
+      this.router.navigate(['/','home','search','songName',queryString.split(' ').join('')]);
+      //this.queryServer.termChanged.emit(queryString);
     }else{
-      if(queryString.length % 4 == 0){
+      if(queryString.length % 2 == 0){
         this.queryServer.termChanged.emit(queryString);
       }
     }

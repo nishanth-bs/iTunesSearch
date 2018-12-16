@@ -3,4 +3,20 @@
     overflow-y: scroll;
     max-height: 75vh;
     min-height: auto;
+    width: 100%;
+
+    &__item{
+        border-bottom: $line;
+    }
+
+    &__title{
+        font-family: 'Signika', sans-serif;
+        color: $color-primary-2;
+        font-size: 3rem;
+        font-weight: 200;
+    }
+
+    &__list{
+        width: 100%;
+    }
 }

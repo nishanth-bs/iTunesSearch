@@ -1,3 +1,4 @@
+@import "../../../../styles/variables";
 .card{
     display: flex;
     flex-direction: column;
@@ -24,9 +25,14 @@
         font-weight: 200;
         &--name{
             font-weight: 400;
+            &:link,&:hover,&:active,&:visited{
+                color: $color-primary-1;
+            }
         }
         &--artistName{
-
+            &:link,&:hover,&:active,&:visited{
+                color: $color-primary-1;
+            }
         }
         &--releaseDate{
 

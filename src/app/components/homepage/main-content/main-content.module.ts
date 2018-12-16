@@ -13,6 +13,9 @@ import { ResultpageComponent } from '../resultpage/resultpage.component';
 import { HomepageComponent } from '../homepage.component';
 import { HeaderComponent } from '../header/header.component';
 import { InputsuggestionsComponent } from '../header/inputsuggestions/inputsuggestions.component';
+import { PlayMusicComponent } from '../play-music/play-music.component';
+import { playAudio } from 'src/app/services/playAudio';
+import { AllResultPageComponent } from './all-result-page/all-result-page.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +26,16 @@ import { InputsuggestionsComponent } from '../header/inputsuggestions/inputsugge
     SearchitemcardComponent,
     SidebarComponent,
     ResultpageComponent,
-    ProcessString
-  
+    ProcessString,
+    PlayMusicComponent,
+    AllResultPageComponent
   ],
   imports: [
     CommonModule,
     MainContentRoutingModule
+  ],
+  providers:[
+    playAudio
   ]
 })
 export class MainContentModule { }

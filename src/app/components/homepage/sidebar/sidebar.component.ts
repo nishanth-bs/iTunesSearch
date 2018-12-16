@@ -34,7 +34,7 @@ export class SidebarComponent implements OnInit {
             console.log(this.data);
         }
     );  */  
-    this.queryServer.termChanged.subscribe(
+  /*  this.queryServer.termChanged.subscribe(
       (term: string)=>{
           this.queryServer.getSearchResults(term).subscribe(
             (respone: Response)=>{
@@ -43,6 +43,6 @@ export class SidebarComponent implements OnInit {
             }
           )
       }
-    );  
+    );  */
   }
 }

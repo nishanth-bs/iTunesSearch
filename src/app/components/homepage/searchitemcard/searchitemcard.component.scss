@@ -1,38 +1,120 @@
+@import "../../../../styles.scss";
 .card{
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100%;
+    position: relative;
+    margin-bottom: 2rem;
+    
+    background-color: #fff;
+    border-radius: 6px 6px 0px 0px;
      
     margin-bottom: 2rem;
 
+    &__play{
+        position: relative;
+        z-index: 200;
+        cursor: pointer;
+        overflow: hidden;
+        &--icon{
+            z-index: 100;
+            height: 35%;
+            width: 35%;
+            fill: rgba($color-primary-1,0.6);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            transition: all .3s;
+        }
+
+        &:hover &--icon{
+            fill: rgba($color-primary-1,1.3);
+        }
+        
+    }
+
+    &__genre{
+        z-index: 100;
+        position: absolute;
+        top:0;
+        left: 0;
+        font-size: 1.5rem;
+        padding: .5rem;
+        font-family: 'Signika',sans-serif;
+        background-color: rgba($color-primary-1,0.7);
+        border-radius: 8px;
+        color: #fff;
+    }
+
     &__thumbnail{
         //flex: 0 1 80%;
-        width: 95%;
-        height: 95%;
-        margin: 2.5%;
-        border-radius: 6px;
-        box-shadow: 3px 3px 5px #aaa;
+         width: 100%;
+         height: 100%;
+        // margin: 2.5%;
+        border-radius: 6px 6px 0px 0px;
+        //box-shadow: 3px 3px 5px #aaa;
+        transition: all .3s;
+        &:hover{
+            transform: scale(1.2);
+            -webkit-filter: brightness(70%);
+            filter: brightness(70%);
+        }
     } 
+
     &__text{
         margin: 0 2.5%;
+        margin-top: 1rem;
         display: flex;
         flex-direction: column;
         justify-content: start;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         font-family: 'Signika', sans-serif;
         font-weight: 200;
+
         &--name{
-            font-weight: 400;
+            &:link,&:hover,&:visited,&:active{
+                font-weight: 400;
+                text-decoration: none;
+                color: $color-primary-1;
+            }
         }
         &--artistName{
-
+            &:link,&:hover,&:visited,&:active{
+                font-weight: 400;
+                text-decoration: none;
+                color:$color-primary-2;
+            }
         }
-        &--releaseDate{
-
+    }
+    &__extra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2rem;
+        &--price{
+            flex: 1;
+            font-size: 2rem;
+            color: $color-primary-2;
+            font-family: 'Signika',sans-serif;
+            font-weight: 300;
         }
-        &--genre{
-
+        &--icon{
+            height: 2.5rem;
+            width: 2.5rem;
+            fill: $color-primary-2;
+        }
+        &--link{
+            justify-self: flex-end;
+            align-self: center;
+            display: inline;
+            flex: 1;
+            &:link,&:visited,&:hover,&:active{
+                text-decoration: none;
+                color:$color-primary-2;
+                font-size: 2rem;
+            }
         }
     }
 }

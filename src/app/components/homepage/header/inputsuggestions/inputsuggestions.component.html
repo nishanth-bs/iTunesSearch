@@ -1,20 +1,32 @@
 
 <div class="suggestions-box" >
-    <div class="suggestions-box__title" *ngIf="songData.length >0">
-        Songs
+    <div class="suggestions-box__item" *ngIf="songData.length >0">
+        <p class="suggestion-box__title">
+            Songs
+        </p>
+        <app-input-suggestions-item class="suggestions-box__list"
+        [data]="songData"></app-input-suggestions-item>
     </div>
-    <app-input-suggestions-item [data]="songData"></app-input-suggestions-item>
-    <div class="suggestions-box__title" *ngIf="artistData.length >0">
-        Artists
+    <div class="suggestions-box__item" *ngIf="artistData.length >0">
+        <p class="suggestion-box__title">
+            Artists
+        </p>
+        <app-input-suggestions-item class="suggestions-box__list"
+        [data]="artistData"></app-input-suggestions-item>
     </div>
-    <app-input-suggestions-item [data]="artistData"></app-input-suggestions-item>
-    <div class="suggestions-box__title" *ngIf="composerData.length >0">
-        Composers
+    <div class="suggestions-box__item" *ngIf="composerData.length >0">
+        <p class="suggestions-box__title">
+            Composers
+        </p> 
+        <app-input-suggestions-item class="suggestions-box__list"
+        [data]="composerData"></app-input-suggestions-item>
     </div>
-    <app-input-suggestions-item [data]="composerData"></app-input-suggestions-item>
-    <div class="suggestions-box__title" *ngIf="albumData.length >0">
-        Albums
+    <div class="suggestions-box__item" *ngIf="albumData.length >0">
+        <p class="suggestion-box__title">
+            Albums
+        </p>
+        <app-input-suggestions-item class="suggestions-box__list"
+        [data]="albumData"></app-input-suggestions-item>
     </div>
-    <app-input-suggestions-item [data]="albumData"></app-input-suggestions-item>
     
 </div>

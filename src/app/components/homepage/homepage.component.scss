@@ -4,15 +4,8 @@
     top: 0;
     display: block;
     width: 100vw;
+    z-index: 2000;
 }
 .content{
-    margin-top: 8rem;
-    display: flex;
-    
-    &__collapsible{
-        width: 22rem;
-    }
-    &__main{
-        flex: 1;
-    }
+    margin-top: 10rem;
 }

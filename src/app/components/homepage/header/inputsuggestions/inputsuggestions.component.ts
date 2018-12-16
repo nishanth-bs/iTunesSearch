@@ -30,7 +30,7 @@ export class InputsuggestionsComponent implements OnInit {
               let b:InputSuggestions;
               response['results'].forEach(element => {
                 console.log(response);
-                b = {
+               b = {
                 trackCensoredName :element['trackCensoredName'],
                 artistName : element['artworkUrl60']
               }
