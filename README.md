@@ -2,14 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.2.
 
-## Development server
+## To run the project on your machine:
+1. npm install
+2. ng serve --proxy-config proxy.conf.json
+3. open localhost4200 in the browser 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1.GIF : 
+![](.gif)
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+# Developed by
+![alt text](https://github.com/yes-i-am-mr-robot/yo/blob/master/107248%20NISHANTH.jpg "Nishanth B S")
+### Nishanth B S
