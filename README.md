@@ -7,8 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 2. ng serve --proxy-config proxy.conf.json
 3. open localhost4200 in the browser 
 
-1.GIF : 
-![](.gif)
+![](https://github.com/nishanth-bs/iTunesSearch/blob/master/src/sceenshots/iTunesSearch.gif)
 
 # Developed by
 ![alt text](https://github.com/yes-i-am-mr-robot/yo/blob/master/107248%20NISHANTH.jpg "Nishanth B S")
